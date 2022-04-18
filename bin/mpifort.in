@@ -16,11 +16,11 @@ case "$1" in
         exit 0
         ;;
     -showme:compile)
-        echo '$MPITRAMPOLINE_FCFLAGS -I@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_INCLUDEDIR@'
+        echo "$MPITRAMPOLINE_FCFLAGS -I@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_INCLUDEDIR@"
         exit 0
         ;;
     -showme:link)
-        echo '$MPITRAMPOLINE_FCFLAGS -L@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_LIBDIR@ -Wl,-rpath,@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_LIBDIR@ -lmpitrampoline -ldl'
+        echo "$MPITRAMPOLINE_FCFLAGS -L@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_LIBDIR@ -Wl,-rpath,@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_LIBDIR@ -lmpitrampoline -ldl"
         exit 0
         ;;
     -showme:incdirs)
